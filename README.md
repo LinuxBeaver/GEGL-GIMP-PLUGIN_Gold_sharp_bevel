@@ -97,6 +97,9 @@ Alt Color Preview on Darken Blend Mode**
 
 ![image preview](guide_presets_and_preview/preview_4.png)
 
+**Preview of the two awesome co plugins that it is required to ship with.**
+![image](https://github.com/LinuxBeaver/Gimp_Gold_Bevel_Text_Style_Plugin/assets/78667207/13233c19-1364-4b22-a130-1d13f2e65f98)
+
 
 
 
