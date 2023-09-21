@@ -4,7 +4,9 @@ https://github.com/LinuxBeaver/Gimp_Gold_Bevel_Text_Style_Plugin/releases
 
 ## Gold Bevel Text Style plugin for Gimp
 
-A Gimp Plugin that transforms plain text into a gold bevel metal text. 
+A Gimp Plugin that transforms plain text into a gold bevel metal text. It also has two dependencies that
+are full fledge filters of their own "metallic" and "sharp bevel". If you already have any of these binaries
+from downloading my plugins from before, overwrite all of them with the latest version.
 
 ![image preview](guide_presets_and_preview/preview.png)
 
