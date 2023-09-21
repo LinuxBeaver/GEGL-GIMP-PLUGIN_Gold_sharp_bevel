@@ -13,27 +13,32 @@ from downloading my plugins from before, overwrite all of them with the latest v
 ![image preview](guide_presets_and_preview/preview2.png)
 
 ## Location to put Binaries 
+
 They don't go in the normal plugins directory.
 
 ### Windows
+
  C:\Users\(USERNAME)\AppData\Local\gegl-0.4\plug-ins
  
 ### Linux 
+
  /home/(USERNAME)/.local/share/gegl-0.4/plug-ins
  
 ### Linux (Flatpak includes Chromebook)
+
  /home/(USERNAME)/.var/app/org.gimp.GIMP/data/gegl-0.4/plug-ins
 
-## This plugin has bonus built in presets that are NOT needed for it to work. 
-If you them them put the text file "GimpGegl-lb-goldbevel-config.settings" in
+## This plugin has bonus built in presets that go in this directory
 
 ## Windows (GimpGegl-lb-goldbevel-config.settings)
+
 C:\Users\username\AppData\Roaming\GIMP\2.10\filters
 
 ### Linux (GimpGegl-lb-goldbevel-config.settings)
 /home/USERNAME/.config/GIMP/2.10/plug-ins
 
 ###Flatpak (GimpGegl-lb-goldbevel-config.settings)
+
 /home/USERNAME/.var/app/org.gimp.GIMP/config/GIMP/2.10/filters
 
 This will give you three really cool presets that make gold without noise/grain and steel text.
