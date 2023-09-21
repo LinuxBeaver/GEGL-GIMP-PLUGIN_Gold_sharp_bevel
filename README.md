@@ -8,7 +8,7 @@ A Gimp Plugin that transforms plain text into a gold bevel metal text. It also h
 are full fledge filters of their own "metallic" and "sharp bevel". If you already have any of these binaries
 from downloading my plugins from before, overwrite all of them with the latest version.
 
-![image preview](guide_presets_and_preview/preview.png)
+![image preview](guide_presets_and_preview/preview.png) 
 
 ![image preview](guide_presets_and_preview/preview2.png)
 
@@ -89,11 +89,11 @@ ninja -C build
 Restart Gimp and go to GEGL Operations Drop Down List and look for "Gold Bevel". 
 If you use Gimp 2.99.16+ go to filters>Text Styling or just search for it.
 
-Alt Preview of Steel Text preset
+**Alt Preview of Steel Text preset**
 
 ![image preview](guide_presets_and_preview/preview_3.png)
-
-Alt Color Preview on Darken Blend Mode
+**
+Alt Color Preview on Darken Blend Mode**
 
 ![image preview](guide_presets_and_preview/preview_4.png)
 
