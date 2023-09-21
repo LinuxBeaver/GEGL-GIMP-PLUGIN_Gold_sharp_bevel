@@ -30,14 +30,14 @@ They don't go in the normal plugins directory.
 
 ## This plugin has bonus built in presets that go in this directory
 
-## Windows (GimpGegl-lb-goldbevel-config.settings)
+### Windows (GimpGegl-lb-goldbevel-config.settings)
 
 C:\Users\username\AppData\Roaming\GIMP\2.10\filters
 
 ### Linux (GimpGegl-lb-goldbevel-config.settings)
 /home/USERNAME/.config/GIMP/2.10/plug-ins
 
-###Flatpak (GimpGegl-lb-goldbevel-config.settings)
+### Flatpak (GimpGegl-lb-goldbevel-config.settings)
 
 /home/USERNAME/.var/app/org.gimp.GIMP/config/GIMP/2.10/filters
 
@@ -92,8 +92,8 @@ If you use Gimp 2.99.16+ go to filters>Text Styling or just search for it.
 **Alt Preview of Steel Text preset**
 
 ![image preview](guide_presets_and_preview/preview_3.png)
-**
-Alt Color Preview on Darken Blend Mode**
+
+**Alt Color Preview on Darken Blend Mode**
 
 ![image preview](guide_presets_and_preview/preview_4.png)
 
