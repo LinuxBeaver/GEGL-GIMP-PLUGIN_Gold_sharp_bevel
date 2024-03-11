@@ -247,7 +247,7 @@ static void update_graph (GeglOperation *operation)
                                   NULL);
 
   state->metallic = gegl_node_new_child (gegl,
-                                  "operation", "gegl:metallic", "guichange", 1, "liquid", 0.3, "solar1", 5.2, "solar2", 5.6, "solar3", 2.1, "light", 0.0, "smooth", 2, "color", bakedcolor2, "opacity", 0.9, "blend", 3, 
+                                  "operation", "lb:metallic", "guichange", 1, "liquid", 0.3, "solar1", 5.2, "solar2", 5.6, "solar3", 2.1, "light", 0.0, "smooth", 2, "color", bakedcolor2, "opacity", 0.9, "blend", 3, 
                                   NULL);
 /*These, "sharp bevel and metallic" are plugins of mine that are useful on their own. Sharp bevel is listed five times each on a different blend mode (hardlight, colordodge, plus, darken, and softlight*/
 
@@ -268,7 +268,7 @@ static void update_graph (GeglOperation *operation)
                                   NULL);
 
   state->fix = gegl_node_new_child (gegl,
-                                  "operation", "gegl:median-blur", "radius", 0, 
+                                  "operation", "gegl:median-blur", "radius", 0,  "abyss-policy",     GEGL_ABYSS_NONE,
                                   NULL);
 /*Median blur at 0 radius makes no changes to an image but resets a GEGL graph*/
 
@@ -304,7 +304,7 @@ default: sharpbevel = state->sharpbevelhardlight;
 
   gegl_node_link_many (state->input, sharpbevel, state->crop, state->metallic, state->idref, state->over, state->bloom, state->inlow, state->fix, state->output, NULL);
   gegl_node_link_many (state->idref, state->noise, state->opacity, state->nr,   NULL);
-  gegl_node_connect_from (state->over, "aux", state->nr, "output");
+  gegl_node_connect (state->over, "aux", state->nr, "output");
 
 /*Outside of one complex exception, this is actually a very simple GEGL graph. Noise and Opacity are inside a "normal" blend mode called "over", everything else is just basic nodes being listed. Remember though, sharpbevel and metallic are plugins of mine that contain complex node connections of their own within their respected .c files. Same goes for Gimp's native bloom filter. The reason noise is inside the over blend mode is so it can be made semi transparent or disabled
 by being made fully transparent and so filter `noise reduction` may run on it alone and not the rest of the graph. Think of the `over` blend mode as a container for other filters so there effects don't leak elsewhere. This is all simple GEGL stuff.
