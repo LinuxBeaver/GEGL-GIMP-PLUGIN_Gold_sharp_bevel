@@ -452,7 +452,7 @@ switch (o->guichange) {
   gegl_node_link_many (state->input, state->invert, state->opacity, NULL);
         break;
     case METAL_COLOR:
-  gegl_node_link_many (state->input, state->gaussian, state->repair2,  state->dctsmooth, state->over, state->solar, state->desat, state->smooth, state->light, state->idref, state->hslcolor,  graphblendmode, state->smooth08, state->repair, state->output, NULL);
+  gegl_node_link_many (state->input, state->gaussian, state->repair2, state->over, state->solar, state->desat, state->smooth, state->light, state->idref, state->hslcolor,  graphblendmode, state->smooth08, state->repair, state->output, NULL);
   gegl_node_connect (state->over, "aux", state->opacity, "output");
   gegl_node_connect (state->hslcolor, "aux", state->color, "output");
   gegl_node_link_many (state->input, state->invert, state->opacity, NULL);
