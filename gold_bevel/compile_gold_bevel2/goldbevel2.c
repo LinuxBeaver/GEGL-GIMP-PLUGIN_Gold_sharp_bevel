@@ -30,12 +30,12 @@ solar3=6000000000000001
 light=0
 smooth=2
 value=0
-color=#f8f2d4 
+color=#f8f2d4
 coloropacity=0.9
 blend=graph4
 
 
-id=1 
+id=1
 over aux=[ ref=1 noise-rgb correlated=false linear=false independent=false red=0.85  green=0.20 blue=0.20  gaussian=true opacity value=0.27   noise-reduction iterations=2 ]
 
 
@@ -184,20 +184,20 @@ property_seed (seed, _("Random seed of noise"), rand)
 typedef struct
 {
  GeglNode *input;
- GeglNode *sharpbevelhardlight; 
+ GeglNode *sharpbevelhardlight;
  GeglNode *sharpbevelcolordodge;
  GeglNode *sharpbevelplus;
  GeglNode *sharpbeveldarken;
  GeglNode *sharpbevelsoftlight;
- GeglNode *metallic; 
+ GeglNode *metallic;
  GeglNode *bloom;
- GeglNode *crop; 
- GeglNode *over; 
- GeglNode *idref; 
- GeglNode *fix; 
+ GeglNode *crop;
+ GeglNode *over;
+ GeglNode *idref;
+ GeglNode *fix;
  GeglNode *nr;
- GeglNode *inlow; 
- GeglNode *noise; 
+ GeglNode *inlow;
+ GeglNode *noise;
  GeglNode *opacity;
  GeglNode *output;
 }State;
@@ -205,7 +205,7 @@ typedef struct
 static void attach (GeglOperation *operation)
 {
 
-  
+
 }
 
 static void update_graph (GeglOperation *operation)
@@ -247,7 +247,7 @@ static void update_graph (GeglOperation *operation)
                                   NULL);
 
   state->metallic = gegl_node_new_child (gegl,
-                                  "operation", "lb:metallic", "guichange", 1, "liquid", 0.3, "solar1", 5.2, "solar2", 5.6, "solar3", 2.1, "light", 0.0, "smooth", 2, "color", bakedcolor2, "opacity", 0.9, "blend", 3, 
+                                  "operation", "lb:metallic", "guichange", 1, "liquid", 0.3, "solar1", 5.2, "solar2", 5.6, "solar3", 2.1, "light", 0.0, "smooth", 2, "color", bakedcolor2,  "blend", 3,
                                   NULL);
 /*These, "sharp bevel and metallic" are plugins of mine that are useful on their own. Sharp bevel is listed five times each on a different blend mode (hardlight, colordodge, plus, darken, and softlight*/
 
@@ -256,15 +256,15 @@ static void update_graph (GeglOperation *operation)
                                   NULL);
 
   state->crop = gegl_node_new_child (gegl,
-                                  "operation", "gegl:crop", 
+                                  "operation", "gegl:crop",
                                   NULL);
 
   state->over = gegl_node_new_child (gegl,
-                                  "operation", "gegl:over", 
+                                  "operation", "gegl:over",
                                   NULL);
 
   state->idref = gegl_node_new_child (gegl,
-                                  "operation", "gegl:nop", 
+                                  "operation", "gegl:nop",
                                   NULL);
 
   state->fix = gegl_node_new_child (gegl,
@@ -273,11 +273,11 @@ static void update_graph (GeglOperation *operation)
 /*Median blur at 0 radius makes no changes to an image but resets a GEGL graph*/
 
   state->nr = gegl_node_new_child (gegl,
-                                  "operation", "gegl:noise-reduction", "iterations", 2, 
+                                  "operation", "gegl:noise-reduction", "iterations", 2,
                                   NULL);
 
   state->inlow = gegl_node_new_child (gegl,
-                                  "operation", "gegl:levels", "in-low", 0.075, 
+                                  "operation", "gegl:levels", "in-low", 0.075,
                                   NULL);
 
   state->noise = gegl_node_new_child (gegl,
@@ -285,7 +285,7 @@ static void update_graph (GeglOperation *operation)
                                   NULL);
 
   state->opacity = gegl_node_new_child (gegl,
-                                  "operation", "gegl:opacity", "value", 0.27,  
+                                  "operation", "gegl:opacity", "value", 0.27,
                                   NULL);
 
 
