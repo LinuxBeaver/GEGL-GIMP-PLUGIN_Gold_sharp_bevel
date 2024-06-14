@@ -305,6 +305,7 @@ default: sharpbevel = state->sharpbevelhardlight;
   gegl_node_link_many (state->input, sharpbevel, state->crop, state->metallic, state->idref, state->over, state->bloom, state->inlow, state->fix, state->output, NULL);
   gegl_node_link_many (state->idref, state->noise, state->opacity, state->nr,   NULL);
   gegl_node_connect (state->over, "aux", state->nr, "output");
+  gegl_node_connect (state->crop, "aux", state->input, "output");
 
 /*Outside of one complex exception, this is actually a very simple GEGL graph. Noise and Opacity are inside a "normal" blend mode called "over", everything else is just basic nodes being listed. Remember though, sharpbevel and metallic are plugins of mine that contain complex node connections of their own within their respected .c files. Same goes for Gimp's native bloom filter. The reason noise is inside the over blend mode is so it can be made semi transparent or disabled
 by being made fully transparent and so filter `noise reduction` may run on it alone and not the rest of the graph. Think of the `over` blend mode as a container for other filters so there effects don't leak elsewhere. This is all simple GEGL stuff.
