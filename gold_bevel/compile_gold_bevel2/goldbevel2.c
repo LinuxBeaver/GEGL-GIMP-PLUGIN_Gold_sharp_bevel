@@ -164,7 +164,7 @@ property_int  (smooth, _("Smooth Metal"), 2)
 
 property_double (opacitynoise, _("Opacity of noise"), 0.27)
     description (_("Opacity of noise seed. 0 disables."))
-    value_range (0.0, 0.40)
+    value_range (0.0, 1.00)
     ui_range    (0.0, 0.40)
    ui_meta ("visible", "advanced_options")
 
