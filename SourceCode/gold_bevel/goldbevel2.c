@@ -81,7 +81,7 @@ enum_end (goldsharpbevel)
 
 property_enum (blendmode, _("Blend Mode of Sharp Bevel's Internal Emboss"),
     goldsharpbevel, gold_sharp_bevel,
-    GEGL_BLEND_MODE_TYPE_HARDLIGHT)
+    GEGL_BLEND_MODE_TYPE_SOFTLIGHT)
    description  (_("Blend mode of Sharp Bevel's internal emboss"))
 
 
@@ -93,7 +93,7 @@ property_double (opacitycolor, _("Opacity of Color. (0% opacity = Silver)"), 0.9
    description  (_("Opacity of Color. Make opacity 0 for silver"))
    value_range  (0.00, 0.90)
 
-property_int  (size, _("Size of the Bevel"), 3)
+property_int  (size, _("Size of the Bevel"), 1)
   value_range (1, 9)
   ui_range    (1, 9)
   ui_meta     ("unit", "pixel-distance")
@@ -103,23 +103,23 @@ property_double (flatsurface, _("Bevel's Flat Surface control"), 1)
     value_range (1.0, 2.5)
   description (_("Moving this slider up will give the bevel a flat surface. At 1 it will be a default sharp surface."))
 
-property_double (azimuth, _("Azimuth"), 67.0)
+property_double (azimuth, _("Azimuth"), 81.0)
     description (_("Light angle (degrees)"))
     value_range (20, 90)
     ui_meta ("unit", "degree")
     ui_meta ("direction", "ccw")
 
-property_double (elevation, _("Elevation"), 35.0)
+property_double (elevation, _("Elevation"), 20.0)
     description (_("Elevation angle (degrees). This appears to rotate the brightest pixels."))
     value_range (7, 70)
     ui_meta ("unit", "degree")
 
-property_int (depth, _("Depth and or detail"), 24)
+property_int (depth, _("Depth and or detail"), 22)
     description (_("Brings out depth and or detail of the bevel depending on the blend mode"))
     value_range (8, 45)
 
 
-property_double (sharpen, _("Sharpen Radius"), 0.0)
+property_double (sharpen, _("Sharpen Radius"), 2.0)
     description (_("Unsharp mask radius that helps the bevel apper to have depth and structure to it."))
     value_range (0, 5)
     ui_range (0, 5)
@@ -133,7 +133,7 @@ property_double (liquid, _("Liquidify Metal"), 0.0)
    ui_meta ("visible", "advanced_options")
 
 
-property_double (solar1, _("Solarization of Red Channel"), 5.2)
+property_double (solar1, _("Solarization of Red Channel"), 5.5)
     description (_("Solarization is another name for Gimp's 'alien map' filter effect, which at low values shifts tones. A method which can create a metallic effect when combined with desaturation. "))
   value_range (5.0, 6.0)
   ui_steps      (5.0, 6.0)
@@ -151,7 +151,7 @@ property_double  (solar3, _("Solarization of Blue Channel"), 2.1)
   value_range (2.0, 2.6)
   ui_steps      (2.0, 5.0)
 
-property_double (bloom, _("Bloom glow effect"), 29.0)
+property_double (bloom, _("Bloom glow effect"), 40.0)
     description (_("This is Gimp's default 'bloom' filter being called to make the metal glow. It can also lighten the metal"))
     value_range (6.0, 70.0)
     ui_range    (6.0, 70.0)
